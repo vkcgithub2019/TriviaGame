@@ -1,5 +1,5 @@
 //creating variables and initializing
-var number = 30;
+var time = 40;
 var intervalId;
 var correctAnswers = 0;
 var incorrectAnswers = 0;
@@ -8,11 +8,11 @@ var unanswered = 0;
 // Questions array
 var questions = [{
     question: "what is the name of the panda who practiced Kung Fu?",
-    answerList: ["Po' \"Master Shifu\"", "Tai Lung' \"Jackie Chan\""],
+    answerList: ["Po","Master Shifu","Tai Lung","Jackie Chan"],
     answer: 0
 },{
     question: "Who is Po's Kung Fu master?",
-    answerList: ["\"Mr. Shifu\" Bruce Lee \"Donnie Chen\""],
+    answerList: ["Mr. Shifu"," Bruce Lee","Donnie Chen"],
     answer: 0
 },{
     question: "What was written on the Dragon Scroll?",
@@ -33,7 +33,7 @@ var questions = [{
 },{
     question: "What does Po's father sell?",
     answerList: ["Tangerine", "Noodles", "Dumplings", "Tofu"],
-    answer: 2
+    answer: 1
 },{
 
     question: "What famous martial artist voiced Master Monkey?",
@@ -55,15 +55,15 @@ var questions = [{
 $("#start").on("click", function() {
 
     // Hide Start button
-    $(this).hide();
+    //$(this).hide();
 
     // Display initial time countdown
-    $("#time").html("<h2>Time Remaining: 30 Seconds</h2>" + "<br>");
+    $("#time").html("<h2>Time Remaining: 40 Seconds</h2>" + "<br>");
 
     // Start timer countdown
     run();
    
-    // Display questions --- I still want to turn this into a reusable piece so that i don't have to repeat this section for each question
+    // Display questions 
     // Question 1
     $("#question1").html("<h3>" + questions[0].question + "</h3>");
     $("#answer1").html("<input type='radio' name='answer1' value='0'>" + "<label>" + questions[0].answerList[0] + "</label>"
@@ -118,6 +118,33 @@ $("#start").on("click", function() {
         + "<input type='radio' name='answer7' value='3'>" + "<label>" + questions[6].answerList[3] + "</label><br><br>"
     );
 
+    // Question 8
+    $("#question8").html("<h3>" + questions[7].question + "</h3>");
+    $("#answer8").html("<input type='radio' name='answer8' value='0'>" + "<label>" + questions[7].answerList[0] + "</label>"
+    + "<input type='radio' name='answer8' value='1'>" + "<label>" + questions[7].answerList[1] + "</label>"
+    + "<input type='radio' name='answer8' value='2'>" + "<label>" + questions[7].answerList[2] + "</label>"
+    + "<input type='radio' name='answer8' value='3'>" + "<label>" + questions[7].answerList[3] + "</label><br><br>"
+    );
+
+
+    // Question 9
+    $("#question9").html("<h3>" + questions[8].question + "</h3>");
+    $("#answer9").html("<input type='radio' name='answer9' value='0'>" + "<label>" + questions[8].answerList[0] + "</label>"
+    + "<input type='radio' name='answer9' value='1'>" + "<label>" + questions[8].answerList[1] + "</label>"
+    + "<input type='radio' name='answer9' value='2'>" + "<label>" + questions[8].answerList[2] + "</label>"
+    + "<input type='radio' name='answer9' value='3'>" + "<label>" + questions[8].answerList[3] + "</label><br><br>"
+    );
+
+
+// Question 10
+    $("#question10").html("<h3>" + questions[9].question + "</h3>");
+    $("#answer10").html("<input type='radio' name='answer10' value='0'>" + "<label>" + questions[9].answerList[0] + "</label>"
+    + "<input type='radio' name='answer10' value='1'>" + "<label>" + questions[9].answerList[1] + "</label>"
+    + "<input type='radio' name='answer10' value='2'>" + "<label>" + questions[9].answerList[2] + "</label>"
+    + "<input type='radio' name='answer10' value='3'>" + "<label>" + questions[9].answerList[3] + "</label><br><br>"
+    );
+
+
     // Submit button
     $("#submit").html("<button id='done' class='btn'>Done</button>");
 
@@ -144,12 +171,12 @@ function run() {
 function decrement() {
 
     //  Decrease number by one.
-    number--;
+    time--;
 
     //  Show the number in the #time tag
-    $("#time").html("<h2>Time Remaining: " + number + " Seconds</h2>" + "<br>");
+    $("#time").html("<h2>Time Remaining: " + time + " Seconds</h2>" + "<br>");
 
-    if (number === 0) {
+    if (time === 0) {
 
         // Run stop function to stop timer countdown
         stop();
@@ -166,7 +193,7 @@ function stop() {
     clearInterval(intervalId);
 }
 
-// Function used for displaying results in terms of correct, incorrect, and unanswered --- I want to put all of these tags inside a div so that i can just hide the parent div
+// Function used for displaying results in terms of correct, incorrect, and unanswered 
 function displayResults() {
 
     $("#time").hide();
@@ -184,6 +211,14 @@ function displayResults() {
     $("#answer6").hide();
     $("#question7").hide();
     $("#answer7").hide();
+    $("#question8").hide();
+    $("#answer8").hide();
+
+    $("#question9").hide();
+    $("#answer9").hide();
+    $("#question10").hide();
+    $("#answer10").hide();
+
     $("#submit").hide();
 
     $("#resultsMessage").html("<h3>All Done!</h3>");
@@ -192,7 +227,7 @@ function displayResults() {
     $("#unanswered").html("Unanswered: " + unanswered);
 }
 
-// Function keeps score in terms of correct, incorrect, and unanswered --- I still want to make this a reusable piece so that I don't have to repeat it for each question
+// Function keeps score in terms of correct, incorrect, and unanswered
 function keepingScore() {
 
     var userAnswer1 = $("input[name='answer1']:checked").val();
@@ -202,6 +237,12 @@ function keepingScore() {
     var userAnswer5 = $("input[name='answer5']:checked").val();
     var userAnswer6 = $("input[name='answer6']:checked").val();
     var userAnswer7 = $("input[name='answer7']:checked").val();
+    var userAnswer8 = $("input[name='answer8']:checked").val();
+    var userAnswer9 = $("input[name='answer9']:checked").val();
+    var userAnswer10 = $("input[name='answer10']:checked").val();
+
+
+
 
     // Question 1
     if (userAnswer1 === undefined) {
@@ -300,4 +341,52 @@ function keepingScore() {
 
         incorrectAnswers++;
     }  
+
+
+// Question 8
+if (userAnswer8 === undefined) {
+
+    unanswered++;
 }
+else if (userAnswer8 == questions[7].answer) {
+
+    correctAnswers++;
+}
+else {
+
+    incorrectAnswers++;
+}  
+
+// Question 9
+if (userAnswer9 === undefined) {
+
+    unanswered++;
+}
+else if (userAnswer7 == questions[8].answer) {
+
+    correctAnswers++;
+}
+else {
+
+    incorrectAnswers++;
+}  
+
+// Question 10
+if (userAnswer10 === undefined) {
+
+    unanswered++;
+}
+else if (userAnswer10 == questions[9].answer) {
+
+    correctAnswers++;
+}
+else {
+
+    incorrectAnswers++;
+}  
+//event listener to restart game once the modal button is clicked 
+}
+    $('.btn-success').on('click', beginGame);
+
+
+
