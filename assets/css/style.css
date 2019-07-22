@@ -1,26 +1,18 @@
 
-body {
-    font-family: 'Lato', sans-serif;
-    font-size: 18px;
-    text-align: center;
-    background-image: url(assets/images/kung fu panda-background-image.jpg);
-    color: lightblue;
-}
 
-.picture{
-    align: center;
-}
 
 
 h2{
     color: red;
     text-align: center;
 }
+
+
 #start{
     text-align: center;
 }
-h3{
-    color: lightyellow;
+h4{
+    color: black;
     text-align: center;
 }
 p{
@@ -31,4 +23,72 @@ p{
    border-left: 15px;
    border-right: 15px;
     background-color: lightgray;
+}
+
+.jumbotron{
+    background-color: lightgray;
+}
+footer {
+    background: #666666;
+    color: #fff;
+    padding: 0;
+    clear: both;
+    color: #cccccc;
+    font-size: 12px;
+    text-align: center;
+    position:fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    margin: auto;
+    
+  }
+#yinyang{
+    background: url(assets/images/yinyang.jpg) center;
+
+}
+
+  * {
+
+    box-sizing: border-box;
+}
+
+body {
+
+    position: relative;
+    font-family: Georgia, Times, "Times New Roman", serif;
+    font-size: 16px;
+    line-height: 20px;
+ //  background: url("../images/background.jpg"); //
+}
+
+h1 {
+
+    margin: 35px 0 0 0;
+    text-align: center;
+    font-size: 60px;
+    line-height: 69px;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    color: #000ecf;
+}
+
+.container {
+
+    text-align: center;
+    margin: 0 15%;
+   //* padding: 30px;*//
+    background: #fffd91
+}
+
+.main-content {
+
+    padding: 5% 0;
+}
+
+.btn {
+
+    padding: 15px 75px;
+    font-size: 20px;
+    background: #ffabf8;
+    border: 2px solid #000ecf;
 }
