@@ -3,20 +3,22 @@
 var timer = 40;
 //time interval
 var intervalId;
-//tracking correct answers
+//variable for tracking correct answers
 var correctAnswers = 0;
-//tracking wrong answers
+//variable for tracking wrong answers
 var incorrectAnswers = 0;
-//tracking unanswered questions
+//variable for tracking unanswered questions
 var unanswered = 0;
 
 // Questions array
 var questions = [{
     question: "what is the name of the panda who practiced Kung Fu?",
+//answer array for question 1
     answerList: ["Po","Master Shifu","Tai Lung","Jackie Chan"],
     answer: 0
 },{
     question: "Who is Po's Kung Fu master?",
+    //answer array for question 2
     answerList: ["Mr. Shifu"," Bruce Lee","Donnie Chen","No one"],
     answer: 0
 },{
@@ -225,7 +227,7 @@ function displayResults() {
     $("#answer10").hide();
 
     $("#submit").hide();
-
+//when timer stops or when player clicked Done button, triggers calculations of correct, incorrect, and unanswered questins and displays them.
     $("#resultsMessage").html("<h3>All Done!</h3>");
     $("#correct").html("Correct Answers: " + correctAnswers);
     $("#incorrect").html("Incorrect Answers: " + incorrectAnswers);
@@ -245,10 +247,6 @@ function keepingScore() {
     var userAnswer8 = $("input[name='answer8']:checked").val();
     var userAnswer9 = $("input[name='answer9']:checked").val();
     var userAnswer10 = $("input[name='answer10']:checked").val();
-
-
-
-
 
     // Question 1
     //if no answer is selected

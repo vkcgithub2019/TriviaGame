@@ -1,7 +1,5 @@
 
 
-
-
 h2{
     color: red;
     text-align: center;
@@ -11,10 +9,12 @@ h2{
 #start{
     text-align: center;
 }
+
 h4{
     color: black;
     text-align: center;
 }
+
 p{
     text-align: center;
 }
@@ -25,14 +25,11 @@ p{
     background-color: lightgray;
 }
 
-.jumbotron{
-    background-color: lightgray;
-}
+
 footer {
     background: #666666;
     color: #fff;
     padding: 0;
-    clear: both;
     color: #cccccc;
     font-size: 12px;
     text-align: center;
@@ -44,7 +41,7 @@ footer {
 }
  
 
-  * {
+  *{
 
     box-sizing: border-box;
 }
@@ -81,10 +78,11 @@ h1 {
     padding: 5% 0;
 }
 
+
 .btn {
 
     padding: 15px 75px;
     font-size: 20px;
     background:#17b632 ;
-    border: 2px solid #000ecf;
+    
 }
