@@ -1,1 +1,4 @@
 In this assignment, I have to create a trivia game/Basic Quiz in a timed form using HTML, CSS, and JQuery. There will be 10 trivia questions and the player will have to answer them in 40 seconds. Each question has 4 answer choices. The player has to select the correct answer for each question by clicking on the radio button corresponding to the correct answer and only one answer for each question can be selected. The timer will start counting down as soon as the player hit the Start button. The game will be over when the time ran out or when the player clicked the Done button. There will be a display showing the number of questions that the player answered correctly and incorrectly, and also the number of unanswered questions. The topic for this game is the popular movie series, Kung Fu Panda.
+
+This is the link to the deployed project:
+https://vkcgithub2019.github.io/TriviaGame/
